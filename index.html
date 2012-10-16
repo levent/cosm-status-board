@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Cosm - Status Board</title>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://d23cj0cdvyoxg0.cloudfront.net/cosmjs-1.0.0.min.js"></script>
+    <script type="text/javascript" src="javascripts/cosm-status-board.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4091770-7']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <hgroup>
+        <h1><img src="/websocket-demo/images/emptyback_notag.png" width="180px"/></h1>
+      </hgroup>
+    </header>
+
+    <article class="api">
+      <section id="feed_get">
+        <header>
+          <h1>Feed Get</h1>
+        </header>
+        <p class="status_code"></p>
+        <p class="value"></p>
+      </section>
+
+      <section id="feed_update">
+        <header>
+          <h1>Feed Update</h1>
+        </header>
+        <p class="status_code"></p>
+      </section>
+    </article>
+
+    <article id="paws">
+      <header>
+        <h1>Socket Server</h1>
+      </header>
+      <p>Messages received: <span id="counter">0</span></p>
+      <div id="average_rate"><span id="average">0</span> updates per second</div>
+      <p id="counter_start"></p>
+    </article>
+
+  </body>
+</html>
+
